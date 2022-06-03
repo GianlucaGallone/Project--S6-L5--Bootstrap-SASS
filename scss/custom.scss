@@ -1,5 +1,75 @@
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'variables';
+@import 'function';
+
+/* valori di default (light theme) */
 
 body {
-    background-color: lightslategrey;
+    background-color: $white;
+    color: $black;
+    .bg-dark {
+        background-color: $gray-600 !important;
+    }
+    .button {
+        background: $white;
+        padding: 10px 20px;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .navbar h1 {
+        font-size: 1.3em;
+    }
+}
+
+/* -------------------------------------------- */
+
+html[select-theme='light'] {
+    @include theme-colors($light-theme: true);
+}
+
+html[select-theme='dark'] {
+    @include theme-colors($light-theme: false);
+}
+
+input[type=checkbox] {
+height: 0;
+width: 0;
+visibility: hidden;
+}
+
+label {
+
+cursor: pointer;
+width: 60px;
+height: 30px;
+background: $blue-300;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 100px;
+position: relative;
+}
+
+label:after {
+content: '';
+background: rgb(0, 0, 0);
+width: 20px;
+height: 20px;
+border-radius: 50%;
+position: absolute;
+top: 5px;
+left: 4px;
+transition: cubic-bezier(.17,.67,.83,.67) 200ms;
+}
+
+input:checked + label {
+background: $blue-700;
+}
+
+input:checked + label:after {
+left: calc(100% - 5px);
+transform: translateX(-100%);
 }

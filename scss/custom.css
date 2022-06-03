@@ -11957,7 +11957,119 @@ fieldset:disabled .btn {
   }
 }
 
+/* al click del button switch da light a dark theme */
+/* valori di default (light theme) */
 body {
-  background-color: lightslategrey;
+  background-color: #fff;
+  color: #000;
+}
+
+body .bg-dark {
+  background-color: #6c757d !important;
+}
+
+body .button {
+  background: #fff;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .navbar h1, body .navbar .h1 {
+  font-size: 1.3em;
+}
+
+/* -------------------------------------------- */
+html[select-theme='light'] body {
+  background-color: #fff;
+  color: #000;
+}
+
+html[select-theme='light'] body #first-cta {
+  background: url(../img/background-light.png);
+}
+
+html[select-theme='light'] body .bg-dark {
+  background-color: #6c757d !important;
+}
+
+html[select-theme='light'] body .button {
+  background: #fff;
+}
+
+html[select-theme='light'] body .navbar h1, html[select-theme='light'] body .navbar .h1 {
+  font-size: 1.3em;
+}
+
+html[select-theme='dark'] body {
+  background-color: #000;
+  color: #fff;
+}
+
+html[select-theme='dark'] body #first-cta {
+  background: url(../img/background-dark.png);
+}
+
+html[select-theme='dark'] body .bg-dark {
+  background-color: #212529 !important;
+}
+
+html[select-theme='dark'] body .button {
+  background: #495057;
+  padding: 10px 20px;
+}
+
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  background: #6ea8fe;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: '';
+  background: black;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  -webkit-transition: cubic-bezier(0.17, 0.67, 0.83, 0.67) 200ms;
+  transition: cubic-bezier(0.17, 0.67, 0.83, 0.67) 200ms;
+}
+
+input:checked + label {
+  background: #084298;
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 /*# sourceMappingURL=custom.css.map */

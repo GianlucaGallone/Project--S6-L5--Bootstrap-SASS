@@ -1,0 +1,41 @@
+@import 'variables';
+
+/* al click del button switch da light a dark theme */
+
+@mixin theme-colors($light-theme: true) {
+  @if $light-theme {
+    body {
+        background-color: $white;
+        color: $black;
+        #first-cta {
+            background: url(../img/background-light.png);
+        }
+        .bg-dark {
+            background-color: $gray-600 !important;
+        }
+        .button {
+            background: $white;
+        }
+        .navbar h1 {
+            font-size: 1.3em;
+        }
+    }
+  } @else {
+    body {
+        background-color: $black;
+        color: $white;
+        #first-cta {
+            background: url(../img/background-dark.png);
+        }
+        .bg-dark {
+            background-color: $gray-900 !important;
+        }
+        .button {
+            background: $gray-700;
+            padding: 10px 20px;
+        }
+    }
+  }
+}
+
+
