@@ -11957,84 +11957,24 @@ fieldset:disabled .btn {
   }
 }
 
-/* al click del button switch da light a dark theme */
-/* valori di default (light theme) */
+/* --- Valori di partenza --- */
 body {
   background-color: #fff;
   color: #000;
+  /* ------ Header / Navbar ------ */
+  /* ----------- Main ----------- */
 }
 
-body .bg-dark {
-  background-color: #6c757d !important;
-}
-
-body .button {
-  background: #fff;
-  padding: 10px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body .navbar h1, body .navbar .h1 {
-  font-size: 1.3em;
-}
-
-/* -------------------------------------------- */
-html[select-theme='light'] body {
-  background-color: #fff;
-  color: #000;
-}
-
-html[select-theme='light'] body #first-cta {
-  background: url(../img/background-light.png);
-}
-
-html[select-theme='light'] body .bg-dark {
-  background-color: #6c757d !important;
-}
-
-html[select-theme='light'] body .button {
-  background: #fff;
-}
-
-html[select-theme='light'] body .navbar h1, html[select-theme='light'] body .navbar .h1 {
-  font-size: 1.3em;
-}
-
-html[select-theme='dark'] body {
-  background-color: #000;
-  color: #fff;
-}
-
-html[select-theme='dark'] body #first-cta {
-  background: url(../img/background-dark.png);
-}
-
-html[select-theme='dark'] body .bg-dark {
-  background-color: #212529 !important;
-}
-
-html[select-theme='dark'] body .button {
-  background: #495057;
-  padding: 10px 20px;
-}
-
-input[type=checkbox] {
+body input[type=checkbox] {
   height: 0;
   width: 0;
   visibility: hidden;
 }
 
-label {
+body label {
   cursor: pointer;
-  width: 60px;
-  height: 30px;
+  width: 55px;
+  height: 25px;
   background: #6ea8fe;
   margin: 0 auto;
   display: -webkit-box;
@@ -12050,26 +11990,257 @@ label {
   position: relative;
 }
 
-label:after {
+body label:after {
   content: '';
   background: black;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   position: absolute;
-  top: 5px;
-  left: 4px;
+  top: 3px;
+  left: 5px;
   -webkit-transition: cubic-bezier(0.17, 0.67, 0.83, 0.67) 200ms;
   transition: cubic-bezier(0.17, 0.67, 0.83, 0.67) 200ms;
 }
 
-input:checked + label {
+body input:checked + label {
   background: #084298;
 }
 
-input:checked + label:after {
+body input:checked + label:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+}
+
+body .bg-dark {
+  /* header / footer background */
+  background-color: #6c757d !important;
+}
+
+body .button {
+  background: none !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .button h6, body .button .h6 {
+  margin-top: 8px;
+  margin-right: 10px;
+}
+
+body .button, body .navbar-dark .navbar-brand, body #navbarCollapse ul li a {
+  color: #212529 !important;
+  font-size: 1em !important;
+  font-weight: 600 !important;
+  text-align: center;
+}
+
+body .navbar-dark .navbar-toggler {
+  margin-bottom: 10px;
+}
+
+body .navbar {
+  padding-bottom: 0;
+}
+
+body .navbar-brand, body .button {
+  margin-top: -15px;
+}
+
+body #navbarCollapse hr {
+  margin-top: -1px;
+}
+
+body #first-cta {
+  background: url(../img/background-light.png);
+  padding-bottom: 50px;
+}
+
+body .mt-5 {
+  padding-top: 75px !important;
+}
+
+body #services {
+  padding: 50px 0 !important;
+}
+
+body #partnerships {
+  margin-bottom: -1px;
+}
+
+body #reviews {
+  margin-top: -40px;
+}
+
+body #reviews .carousel-control-prev, body .carousel-control-next {
+  background-color: #adb5bd !important;
+  width: 10%;
+}
+
+body #reviews .lh-lg {
+  padding: 10px 60px;
+}
+
+/* al click del button, switch light/dark */
+html[select-theme='light'] {
+  /* = true */
+}
+
+html[select-theme='light'] body {
+  background-color: #fff;
+  color: #000;
+  /* ------ Header / Navbar ------ */
+  /* ----------- Main ----------- */
+}
+
+html[select-theme='light'] body input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+html[select-theme='light'] body label {
+  cursor: pointer;
+  width: 55px;
+  height: 25px;
+  background: #6ea8fe;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100px;
+  position: relative;
+}
+
+html[select-theme='light'] body label:after {
+  content: '';
+  background: black;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  -webkit-transition: cubic-bezier(0.17, 0.67, 0.83, 0.67) 200ms;
+  transition: cubic-bezier(0.17, 0.67, 0.83, 0.67) 200ms;
+}
+
+html[select-theme='light'] body input:checked + label {
+  background: #084298;
+}
+
+html[select-theme='light'] body input:checked + label:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+html[select-theme='light'] body .bg-dark {
+  /* header / footer background */
+  background-color: #6c757d !important;
+}
+
+html[select-theme='light'] body .button {
+  background: none !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html[select-theme='light'] body .button h6, html[select-theme='light'] body .button .h6 {
+  margin-top: 8px;
+  margin-right: 10px;
+}
+
+html[select-theme='light'] body .button, html[select-theme='light'] body .navbar-dark .navbar-brand, html[select-theme='light'] body #navbarCollapse ul li a {
+  color: #212529 !important;
+  font-size: 1em !important;
+  font-weight: 600 !important;
+  text-align: center;
+}
+
+html[select-theme='light'] body .navbar-dark .navbar-toggler {
+  margin-bottom: 10px;
+}
+
+html[select-theme='light'] body .navbar {
+  padding-bottom: 0;
+}
+
+html[select-theme='light'] body .navbar-brand, html[select-theme='light'] body .button {
+  margin-top: -15px;
+}
+
+html[select-theme='light'] body #navbarCollapse hr {
+  margin-top: -1px;
+}
+
+html[select-theme='light'] body #first-cta {
+  background: url(../img/background-light.png);
+  padding-bottom: 50px;
+}
+
+html[select-theme='light'] body .mt-5 {
+  padding-top: 75px !important;
+}
+
+html[select-theme='light'] body #services {
+  padding: 50px 0 !important;
+}
+
+html[select-theme='light'] body #partnerships {
+  margin-bottom: -1px;
+}
+
+html[select-theme='light'] body #reviews {
+  margin-top: -40px;
+}
+
+html[select-theme='light'] body #reviews .carousel-control-prev, html[select-theme='light'] body .carousel-control-next {
+  background-color: #adb5bd !important;
+  width: 10%;
+}
+
+html[select-theme='light'] body #reviews .lh-lg {
+  padding: 10px 60px;
+}
+
+html[select-theme='dark'] {
+  /* dark theme */
+}
+
+html[select-theme='dark'] body {
+  background-color: #495057;
+  color: #fff;
+}
+
+html[select-theme='dark'] body #first-cta {
+  background: url(../img/background-dark.png);
+}
+
+html[select-theme='dark'] body .bg-dark {
+  background-color: #212529 !important;
+}
+
+html[select-theme='dark'] body .button, html[select-theme='dark'] body .navbar-dark .navbar-brand, html[select-theme='dark'] body #navbarCollapse ul li a {
+  color: #fff !important;
 }
 /*# sourceMappingURL=custom.css.map */
