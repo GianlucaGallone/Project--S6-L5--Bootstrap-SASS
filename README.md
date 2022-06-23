@@ -1,5 +1,5 @@
 <p><h2 align="center" dir="auto"><b>Epicode School - Week 6 Project</b></h2></p>
-<p align="center" dir="auto">Track: Create a sample Bootstrap page, with Sass mixin for a Dark/Light Theme Button</p>
+<p align="center" dir="auto">Track: Use Bootstrap to create a sample page, Sass for mixins and JavaScript to implement logic for a Dark/Light Theme Button</p>
 
 <p align="center" dir="auto"><b>Technologies Used:</b></p>
 <p align="center" dir="auto"> 
